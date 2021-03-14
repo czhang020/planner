@@ -17,7 +17,7 @@ public class HelloController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String getHello(@RequestParam(required = false) String name, ModelMap model) {
-        model.addAttribute("name", (name != null ? name : "friend") + "!");
+        model.addAttribute("name", (name != null ? name : "world"));
         model.addAttribute("tasks", tasks);
 
         return "hello";
